@@ -4,7 +4,6 @@ services:
     runtime: static
     repo: https://github.com/SLIANG9468/YunOldshue.photos
     branch: main
-    buildCommand: ""
+    buildCommand: "true"
     staticPublishPath: .
-    pullRequestPreviewsEnabled: false
     autoDeployTrigger: commit
