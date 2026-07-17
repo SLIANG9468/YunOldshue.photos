@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: yunoldshue-photos
+    runtime: static
+    repo: https://github.com/SLIANG9468/YunOldshue.photos
+    branch: main
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    autoDeployTrigger: commit
