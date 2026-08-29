@@ -11,7 +11,7 @@
     --text-light: #666;
     --bg-cream: #FAF7F4;
     --bg-white: #ffffff;
-    --spacing-lg: 120px;
+    --spacing-lg: 40px;
     --spacing-md: 80px;
     --spacing-sm: 40px;
     --photo-aspect-ratio: 3 / 2;
@@ -76,9 +76,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: var(--bg-cream);
     padding: var(--spacing-lg) 20px;
@@ -88,19 +86,25 @@ nav {
 .hero-content {
     max-width: 1200px;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 60px;
-    align-items: center;
+    display: flow-root;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-light);
 }
 
-.hero-text {
-    text-align: left;
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.hero-content p:last-child {
+    margin-bottom: 0;
 }
 
 .hero-image {
-    display: inline-block;
-    height: 600px;
+    float: left;
+    width: 400px;
+    margin: 0 40px 20px 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -109,18 +113,9 @@ nav {
 }
 
 .hero-image img {
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
     display: block;
-}
-
-.hero-name {
-    font-size: clamp(80px, 12vw, 160px);
-    font-weight: 200;
-    line-height: 0.95;
-    margin-bottom: 30px;
-    letter-spacing: -2px;
-    text-transform: capitalize;
 }
 
 .hero-title {
@@ -197,7 +192,7 @@ nav {
 /* Projects Section */
 .projects {
     padding: var(--spacing-lg) 20px;
-    background-color: var(--bg-cream);
+    background-color: var(--bg-white);
 }
 
 /* Skills Section */
@@ -313,13 +308,6 @@ nav {
     font-weight: 500;
 }
 
-.project-number {
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--primary-color);
-    margin: 10px 0;
-}
-
 .project-desc {
     color: var(--text-light);
     font-size: 16px;
@@ -421,18 +409,10 @@ footer {
         padding: var(--spacing-md) 20px;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hero-text {
-        text-align: center;
-    }
-
     .hero-image {
-        height: 400px;
-        order: -1;
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
     }
 
     .section-title {
